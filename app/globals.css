@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap');
+
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.bg-color{
+  background-color: rgba(190, 193, 197, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.bg-color:is(.dark .dark\:bg-\[\]) {
+  background-color: rgba(28, 28, 28,0.4); 
+}
+.bg-color-dark{
+  background-color: rgba(28, 28, 28,0.4);
+}
+/* dark mode toogle */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+}
+
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+ 
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #1b1b27;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  background-color: #dad4ef;
+}
+
+.Heroprofile{
+  background: url('../public/Profile/image1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+}
+.Heroprofile2{
+  background: url('../public/Profile/image2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+}
+.Heroprofile3{
+  background: url('../public/Profile/image3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+}
+.Heroprofile4{
+  background: url('../public/Profile/image1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid black;
+}
+
+/* For highlighting effect on profile  */
+.border-glow {
+  box-shadow: 0 0 10px rgba(137, 98, 247, 0.7), 
+              0 0 20px rgba(137, 98, 247, 0.6), 
+              0 0 30px rgba(137, 98, 247, 0.5);
+}
+
+.text-glow {
+  text-shadow: 0 0 5px rgba(137, 98, 247, 0.7), 
+               0 0 10px rgba(137, 98, 247, 0.6), 
+               0 0 15px rgba(137, 98, 247, 0.5);
+}
+
+/* .text-glow {
+  text-shadow: 0 0 1px rgba(137, 98, 247, 0.7), 0 0 8px rgba(137, 98, 247, 0.6), 0 0 6px rgba(137, 98, 247, 0.5);
+} */
+
+
+
+
+

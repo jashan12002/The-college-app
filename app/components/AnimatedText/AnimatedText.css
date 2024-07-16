@@ -1,0 +1,60 @@
+.animated-text-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.animated-text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    animation: moveRightToLeft 20s linear infinite; /* Adjust duration and timing function as needed */
+    color: #00509d; /* Gray color */
+    opacity: 0.5;.animated-text-container {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .animated-text {
+        display: inline-block;
+        animation: moveRightToLeft 10s linear infinite; /* Adjust duration and timing function as needed */
+        color: #00509d; /* Gray color */
+        position: relative; /* Required for the pseudo-element */
+    }
+    
+    .animated-text::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        pointer-events: none; /* Ensures the hover effect works correctly */
+    }
+    
+    .animated-text:hover::before {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    
+    @keyframes moveRightToLeft {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
